@@ -4,7 +4,11 @@ require 'sinatra'
 require 'sinatra/reloader'
 require 'sinatra/activerecord'
 
+#Create database 
+ 
 set :database, "sqlite3:barbershop.db"
+
+#Create entity Client
 
 class Client < ActiveRecord::Base 
 end
