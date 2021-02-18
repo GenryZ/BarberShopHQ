@@ -32,6 +32,13 @@ post '/visit' do
 	@barber = params[:barber]
 	@color = params[:color]
 
+	c = Client.new
+	c.name = @username
+	c.phone = @phone
+	c.datestamp = @datetime
+	c.barber = @barber
+	c.color = @color 
+	c.save #save the variables
 	
 	erb "<h2> Thank you!</h2>"
 end
