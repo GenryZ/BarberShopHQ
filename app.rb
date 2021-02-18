@@ -32,7 +32,9 @@ end
 post '/visit' do 
 	
 	c = Client.new params[:client]#создаем объект класса Клиент и передаем параметры в visit.erb
-	c.save
-
-	erb "<h2> Thank you!</h2>"
+	if c.save
+		erb "<h2> Thank you!</h2>"
+	else	
+		erb "<h1>Error</h1>"
+	end
 end
