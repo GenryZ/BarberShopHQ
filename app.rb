@@ -27,7 +27,7 @@ get '/visit' do
 end
 post '/visit' do 
 	
-	c = Client.new params[:client]
+	c = Client.new params[:client]#создаем объект класса Клиент и передаем параметры в visit.erb
 	c.save
 	
 	erb "<h2> Thank you!</h2>"
