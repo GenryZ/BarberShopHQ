@@ -35,6 +35,11 @@ post '/visit' do
 	if c.save
 		erb "<h2> Thank you!</h2>"
 	else	
-		erb "<h1>Error</h1>"
+		@error = c.errors.full_messages.first #у с есть свойство error
+												#у errors есть messages
+												#это массив
+												#у него есть first элемент
+												#кего мы будем выводить
+		erb :visit
 	end
 end
