@@ -5,29 +5,29 @@
  
   <div class="form-group">
     <label>Ваше имя</label>
-    <input id="ccc" name="username" type="text" class="form-control" placeholder="Ваше имя" value="<%= @user_name %>">
+    <input id="ccc" name="client[name]" type="text" class="form-control" placeholder="Ваше имя" value="">
   </div>
 <div class="form-group">
     <label>Ваш телефончик</label>
-    <input id="bbb" name="phone" type="text" class="form-control" placeholder="Ваш телефон" value="<%= @phone %>">
+    <input id="bbb" name="client[phone]" type="text" class="form-control" placeholder="Ваш телефон" value="">
   </div>
   <div class="form-group">
     <label>Ваше время</label>
-    <input id="datetimepicker" name="datetime" type="text" class="form-control" placeholder="Введите дату и время" value="<%= @date_time %>">
+    <input id="datetimepicker" name="client[datestamp]" type="text" class="form-control" placeholder="Введите дату и время" value="">
   </div> 
   <div>  
-    <label>Выберите парикмахера</label>
+  <!--  <label>Выберите парикмахера</label>
     <select name="barbers" class="form-control ccc">
        <% @barbers.each do |item| %>
       <option <%= @barber == item['name'] ? 'selected' : ''%>><%= item['name'] %></option>
-      <% end %>
+      <% end %> -->
 
 
     </select>
   </div><br/>
     <div class="form-group">
     <label>Какой цвет краски вы хотите</label>
-      	<select id="color" name="color">
+      	<select id="color" name="client[color]">
   		<option value="#7bd148">Green</option>
   		<option value="#5484ed">Bold blue</option>
   		<option value="#a4bdfc">Blue</option>
