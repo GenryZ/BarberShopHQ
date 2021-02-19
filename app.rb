@@ -58,6 +58,20 @@ get '/bookings' do
 end
 
 get '/client/:id' do
-	@client = Client.find(params[:id])
+	@client = Client.find(params[:id]) 
 	erb :client
+end
+get '/contacts' do
+  erb :contacts
+end
+post '/contacts' do 
+	@login = params[:login]
+	@pass = params[:password]
+	
+	if @login == "admin" && @pass == "secret"
+	erb :message
+	else 
+	@error = '<p><h1>Access denied</h1></p>'
+	erb :contacts
+	end
 end
