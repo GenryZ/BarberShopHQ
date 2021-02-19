@@ -18,7 +18,8 @@ class Client < ActiveRecord::Base
 end
 class Barber < ActiveRecord::Base
 end
-
+class Person < ActiveRecord::Base
+end
 before do
 	@barbers = Barber.all
 end
@@ -43,6 +44,7 @@ post '/visit' do
 												#кего мы будем выводить
 		erb :visit
 	end
+
 end
 
 get '/barber/:id' do 
